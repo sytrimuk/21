@@ -27,7 +27,7 @@ SetConsoleCP(1251);
 
 	vector<int> win;
 	vector<int> loss;
-
+	
 	long x = rand();
 	srand(x);
 	short c1 = rand() % 9 + 2;
@@ -97,25 +97,25 @@ SetConsoleCP(1251);
 	short scH;
 	scH = c1 + c2;
 
-	cout << "���� ����� " << scH << endl << endl;
+	cout << "Ваши карты " << scH << endl << endl;
 
 	bool zapros;
-	cout << "���� ������ ����� ��� ����� �������� 1\n���� ��� 0\n�����������(����� ��������)\n" << endl;
+	cout << "Если хотите взять ещё карты напишите 1\nЕсли нет 0\nОбязательно(Может вылететь)\n" << endl;
 
 	while (true){
-		cout << "��� �����: ";
+		cout << "Ваш выбор: ";
 		cin >> zapros;
 		cout << endl;
 		if (zapros == 1){
 			long c = rand();
 			srand(c);
 			short c3 = rand() % 9 + 2;
-			cout << "��� ������ " << c3 << endl;
+			cout << "Вам выпало " << c3 << endl;
 			scH = scH + c3;
 		}
 		else if (zapros == 0){break;}
 		else{break;}
-		cout << "���� ����� " << scH << endl << endl;
+		cout << "Ваши карты " << scH << endl << endl;
 	}
 
 	if(2 <= scH && 21 >= scH){
@@ -131,63 +131,63 @@ SetConsoleCP(1251);
 
 	if(scD <= 21 && scB <= 21 && scH <= 21){
 		if (scD == win[2]){
-			cout << "������� ����\n� ����� ����������� �����: "<< scD << endl;
-			cout << "��� ���� ���� " << scB << endl;
-			cout << "��� ���� �������� " << scH << endl;
+			cout << "Выиграл Дила\nС таким количеством очков: "<< scD << endl;
+			cout << "Это очки Бота " << scB << endl;
+			cout << "Это очки Человека " << scH << endl;
 		}
 		else if (scB == win[2]){
-			cout << "������� ���\n� ����� ����������� �����: "<< scB << endl;
-			cout << "��� ���� ���� " << scD << endl;
-			cout << "��� ���� �������� " << scH << endl;
+			cout << "Выиграл Бот\nС таким количеством очков: "<< scB << endl;
+			cout << "Это очки Дилы " << scD << endl;
+			cout << "Это очки Человека " << scH << endl;
 		}
 		else if(scH == win[2]){
-			cout << "������� �������\n� ����� ����������� �����: "<< scH << endl;
-			cout << "��� ���� ���� " << scD << endl;
-			cout << "��� ���� ���� " << scB << endl;
+			cout << "Выиграл Человек\nС таким количеством очков: "<< scH << endl;
+			cout << "Это очки Дилы " << scD << endl;
+			cout << "Это очки бота " << scB << endl;
 		}
-		else{cout << "��?";}
+		else{cout << "ЧО?";}
 	}
 
 	else{
 		if (win[2] != 0){
 			if (win[2] == scD){
-				cout << "������� ����\n� ����� ����������� �����: "<< scD << endl;
-				cout << "��� ���� ���� " << scB << endl;
-				cout << "��� ���� �������� " << scH << endl;
+				cout << "Выиграл Дила\nС таким количеством очков: "<< scD << endl;
+				cout << "Это очки Бота " << scB << endl;
+				cout << "Это очки Человека " << scH << endl;
 			}
 
 			else if (win[2] == scB){
-				cout << "������� ���\n� ����� ����������� �����: "<< scB << endl;
-				cout << "��� ���� ���� " << scD << endl;
-				cout << "��� ���� �������� " << scH << endl;
+				cout << "Выиграл Бот\nС таким количеством очков: "<< scB << endl;
+				cout << "Это очки Дилы " << scD << endl;
+				cout << "Это очки Человека " << scH << endl;
 			}
 
 			else if (win[2] == scH){
-				cout << "������� �������\n� ����� ����������� �����: "<< scH << endl;
-				cout << "��� ���� ���� " << scD << endl;
-				cout << "��� ���� ���� " << scB << endl;
+				cout << "Выиграл Человек\nС таким количеством очков: "<< scH << endl;
+				cout << "Это очки Дилы " << scD << endl;
+				cout << "Это очки бота " << scB << endl;
 			}
 
 			else if (win[1] == scD){
-				cout << "������� ����\n� ����� ����������� �����: "<< scD << endl;
-				cout << "��� ���� ���� " << scB << endl;
-				cout << "��� ���� �������� " << scH << endl;
+				cout << "Выиграл Дила\nС таким количеством очков: "<< scD << endl;
+				cout << "Это очки Бота " << scB << endl;
+				cout << "Это очки Человека " << scH << endl;
 			}
 
 			else if (win[1] == scB){
-				cout << "������� ���\n� ����� ����������� �����: "<< scB << endl;
-				cout << "��� ���� ���� " << scD << endl;
-				cout << "��� ���� �������� " << scH << endl;
+				cout << "Выиграл Бот\nС таким количеством очков: "<< scB << endl;
+				cout << "Это очки Дилы " << scD << endl;
+				cout << "Это очки Человека " << scH << endl;
 			}
 
 			else if (win[1] == scH){
-				cout << "������� �������\n� ����� ����������� �����: "<< scH << endl;
-				cout << "��� ���� ���� " << scD << endl;
-				cout << "��� ���� ���� " << scB << endl;
+				cout << "Выиграл Человек\nС таким количеством очков: "<< scH << endl;
+				cout << "Это очки Дилы " << scD << endl;
+				cout << "Это очки бота " << scB << endl;
 			}
 		}
-		else if(loss[2] != 0 && loss[1] != 0 && loss[0] != 0){cout << "����������� ���" << endl; cout << "��� ���� ���� " << scD << endl; cout << "��� ���� ���� " << scB << endl; cout << "��� ���� �������� " << scH << endl;}
+		else if(loss[2] != 0 && loss[1] != 0 && loss[0] != 0){cout << "Победителей нет" << endl; cout << "Это очки Дилы " << scD << endl; cout << "Это очки бота " << scB << endl; cout << "Это очки Человека " << scH << endl;}
 	}
 	system("PAUSE");
 	return 0;
- }
+}
